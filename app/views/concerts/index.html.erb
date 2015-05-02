@@ -1,0 +1,28 @@
+<div class="clearfix">
+<section class="my_section">
+	<h1> <strong> What is happening today...</strong></h1>
+	<ul>
+		<% @concerts.each do |c| %>
+			<li>
+				<strong> Band: </strong><%= c.band %>, <strong> Venue: </strong><%= c.venue %>, <strong> City: </strong><%= c.city %>,
+				<strong> Date: </strong><%= c.date.strftime("%d-%m-%Y") %>
+				<p> <strong> Description: </strong><%= c.description %> </p>
+			</li>
+		<% end %>
+	</ul>
+</section>
+
+<aside class="my_aside">
+	<p> <h3> <strong> Later this month... </strong></h3> </p>
+	<ul>
+		<% @concerts_last_mont.each do |c| %>
+			<li>
+				<strong> <%= link_to c.band, concert_path(c)%> </strong>
+			</li>
+		<% end %>
+	</ul>
+
+</aside>
+
+</div>
+

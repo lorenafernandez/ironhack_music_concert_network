@@ -1,0 +1,8 @@
+<div class="clearfix">
+	<p> Comentarios sobre el concierto de <strong><%= @concerts.band %></strong> en <strong><%= @concerts.venue%></strong></p>
+<% @concerts.comments.each do |comment| %>
+	<div class="comment">
+		<%= comment.content %>
+	</div>
+<% end %>
+</div>

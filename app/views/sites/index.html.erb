@@ -1,0 +1,10 @@
+<div class="clearfix">
+<h3> <strong> Concerts you can buy with <%=params[:money]%>€</strong> </h3>
+	<ul>	
+		<% Concert.all.are_you_cheaper_than(params[:money].to_f).each do |concert|%>
+		<li>
+			<%= concert.band %> - <%= concert.price %>€ - <%= concert.date.strftime("%d-%m-%Y") %>
+		</li>
+		<% end %>	
+	</ul>
+</div>

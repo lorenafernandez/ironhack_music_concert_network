@@ -1,0 +1,9 @@
+<div class="clearfix">
+<p> <%= link_to "Add a new concert", new_concert_path %> </p>
+	<%= form_tag do |f| %>
+		  <%= label_tag(:money, "Introduce how much are you willing to spend...") %>
+		  <%= number_field_tag(:money) %>
+		  <%= submit_tag("Search Concerts!!") %>
+	<% end %>
+</div>
+

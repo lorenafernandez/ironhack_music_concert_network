@@ -1,0 +1,31 @@
+<div class="clearfix">
+	<p> <strong> Concert: </strong>  </p>
+	<ul>
+		<li> <strong> Band: </strong><%= @concert.band %> </li>
+		<li> <strong> Venue: </strong><%= @concert.venue %> </li>
+		<li> <strong> City: </strong><%= @concert.city %> </li>
+		<li> <strong> Date: </strong><%= @concert.date %> </li>
+		<li> <strong> Price: </strong><%= @concert.price %> </li>
+		<li> <strong> Description: </strong><%= @concert.description %> </li>
+	</ul>
+</div>
+
+<div class="clearfix">
+	<p> Comentarios sobre el concierto de <strong><%= @concert.band %></strong> en <strong><%= @concert.venue%></strong></p>
+	<% @concert.comments.each do |comment| %>
+		<div class="comment">
+			<%= comment.content %>
+		</div>
+	<% end %>	
+</div>
+
+<div class="clearfix">
+	<%= form_for [@concert, @comment] do |f| %>
+
+		<%= f.label  "Add a comment" %>
+		<%= f.text_area :content, rows: 3, cols: 95 %>
+
+		<p> <%= f.submit 'Add a comment'%> </p>
+
+	<% end %>
+</div>

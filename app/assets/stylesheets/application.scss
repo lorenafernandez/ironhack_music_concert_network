@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ * require_tree .
+ * require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+	font-family: 'Raleway', sans-serif;
+	background: #ffffcc;
+}
+
+label{
+	display: block;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  background: MintCream;
+  text-align: center;
+  font-size: 40px;
+}
+
+.header:before {
+  content: " ";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -5px;
+}
+
+.header {
+  background: MistyRose;
+  height: 100px;
+}
+
+.footer:before {
+  content: " ";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -5px;
+}
+
+.footer {
+  background: MistyRose;
+  height: 100px;
+  width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form{
+	background: #D3D3D3;
+	font-size: 18px;
+}
+
+.clearfix{
+	background: #D3D3D3;
+	font-size: 18px;
+	text-align: left;
+}
+
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;	
+}
+
+.my_section{
+	float: left;
+	width: 600px;
+	height: 550px;
+	background: #cff2c1;
+}
+
+.my_aside{
+	float: right;
+	width: 300px;
+	height: 550px;
+	background: #cff2c1;
+
+}
+
+.comment{
+	background: white;
+	font-size: 13px;
+	text-align: left;
+	border: 1px solid grey;
+}
